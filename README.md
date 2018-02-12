@@ -1,6 +1,7 @@
 # flex-grid
 A simple grid built with LESS and flexbox
 
+```
 @bp-min: 320px;
 @bp-xs: 480px;
 @bp-sm: 540px;
@@ -115,3 +116,4 @@ A simple grid built with LESS and flexbox
 .l-flex--row-max {
   .flex-row(@bp-max);
 }
+```
