@@ -85,6 +85,10 @@ A simple grid built with LESS and flexbox
     }
 }
 
+.l-flex__none {
+  flex: none;
+}
+
 .l-flex--row-min {
   .flex-row(@bp-min);
 }
