@@ -2,7 +2,7 @@ body {
   padding: 1rem;
 }
 
-/*-----------------------*/
+/* Major Breakpoints */
 @bp-min: 320px;
 @bp-xs: 480px;
 @bp-sm: 540px;
@@ -14,35 +14,34 @@ body {
 
 .flex-row(@size: @bp-med) {
   @media (min-width: @size) {
-    
     > * {
       flex: auto;
     }
-    
+
     .l-flex__eighth {
       flex: 0 0 12.5%;
     }
-    
+
     .l-flex__quarter {
       flex: 0 0 25%;
     }
-    
+
     .l-flex__third {
       flex: 0 0 33.333%;
     }
-    
+
     .l-flex__half {
       flex: 0 0 50%;
     }
-    
+
     .l-flex__two-third {
       flex: 0 0 66.666%;
     }
-    
+
     .l-flex__three-quarter {
       flex: 0 0 75%;
     }
-    
+
     .l-flex__full {
       flex: 0 0 100%;
     }
@@ -50,40 +49,40 @@ body {
 }
 
 .l-flex {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -.5rem;
-    margin-top: -.5rem;
-    margin-bottom: .5rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+
+  > * {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  &.l-flex--no-row-gap {
+    margin-top: 0;
+    margin-bottom: 0;
 
     > * {
-        box-sizing: border-box;
-        flex:  0 0 100%;
-        padding-left: .5rem;
-        padding-top: .5rem;
+      padding-top: 0;
     }
+  }
 
-    &.l-flex--no-row-gap {
-        margin-top: 0;
-        margin-bottom: 0;
+  &.l-flex--no-col-gap {
+    margin-left: 0;
 
-        > * {
-            padding-top: 0;
-        }
+    > * {
+      padding-left: 0;
     }
+  }
 
-    &.l-flex--no-col-gap {
-        margin-left: 0;
-      
-        > * {
-            padding-left: 0;
-        }
-    }
-
-    &.l-flex--no-gap {
-        .l-flex--no-row-gap;
-        .l-flex--no-col-gap;
-    }
+  &.l-flex--no-gap {
+    .l-flex--no-row-gap;
+    .l-flex--no-col-gap;
+  }
 }
 
 .l-flex__none {
@@ -122,21 +121,28 @@ body {
   .flex-row(@bp-max);
 }
 
-/*-------------------*/
+/**
+ * Example Styles
+*/
 .l-flex > * div {
-  background: #336b87; 
-  color: #fff; 
-  padding: .4rem;
+  background: #336b87;
+  color: #fff;
+  padding: 0.4rem;
 }
 
-// Using Flexbox mixin in ruleset
-.minor-bp-auto {
+/**
+ * Example of creating a minor break
+ * point ruleset using the flex
+ * selectors as mixins in LESS
+*/
+
+.l-flex--500 {
   .l-flex;
   .flex-row(500px);
-  
+
   > * div {
     background: #763626;
     color: #fff;
-    padding: .4rem;
+    padding: 0.4rem;
   }
 }
