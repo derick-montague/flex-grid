@@ -83,8 +83,8 @@ A simple grid built using LESS and flexbox. Using CSS Grid is a much better appr
 
 ## Description
 
-Since this grid is based on flexbox there are many ways to implement the grid. It is not a 12 or 16 column grid. Due to it's simplicity, the code required to create the layout has a small footprint compared to many other grids.
+Since this grid is based on flexbox there are many ways it can be implemented. The example can be found on CodePen. It is not a 12 or 16 column grid. Due to it's simplicity, the code required to create the layout has a small footprint compared to many other grids.
 
 This was created before CSS Grid was fully released to meet my own project needs and personal interest in writing a grid. Most of my projects didn't have a need to change the layout at different breakpoints, e.g. 6 column at a medium breakpoint and 4 column at a small breakpoint. These are great options provided by other grid systems, but I rarely found the need on my projects.
 
-Another reason for this was, the projects that I had been working on were deveoped using LESS and most of the Grid implementations from popular style guides/design systems are writting in SCSS.
+Also, most the projects I had been working on were developed using LESS and most of the Grid implementations from popular style guides/design systems are writting in SCSS.
